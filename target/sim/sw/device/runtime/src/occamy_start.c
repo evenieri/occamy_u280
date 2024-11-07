@@ -13,6 +13,9 @@
 #define SNRT_CRT0_EXIT
 #define SNRT_CRT0_ALTERNATE_EXIT
 
+static inline void snrt_exit(int exit_code) {
+}
+
 static inline void snrt_crt0_callback3() {
     _snrt_cluster_hw_barrier = cluster_hw_barrier_addr(snrt_cluster_idx());
 }

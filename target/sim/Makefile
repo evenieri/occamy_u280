@@ -433,7 +433,9 @@ PLATFORM_HEADERS += $(PLATFORM_HEADERS_DIR)/snitch_quad_peripheral.h
 PLATFORM_HEADERS += $(PLATFORM_HEADERS_DIR)/snitch_hbm_xbar_peripheral.h
 PLATFORM_HEADERS += $(PLATFORM_HEADERS_DIR)/idma.h
 
-.PHONY: sw clean-headers clean-sw
+.PHONY: sw all-headers clean-headers clean-sw
+
+all-headers: $(PLATFORM_HEADERS)
 
 sw: $(PLATFORM_HEADERS)
 	$(MAKE) -C sw/ all
