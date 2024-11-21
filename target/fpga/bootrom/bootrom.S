@@ -92,7 +92,7 @@ _snitch_resume:
 .align 3
 .globl device_tree
 device_tree:
-    .incbin "occamy.dtb"
+    .incbin "occamy_pcie.dtb"
 
 #ifdef SPLBIN
 .align 3

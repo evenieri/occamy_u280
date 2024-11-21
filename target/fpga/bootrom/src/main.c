@@ -5,7 +5,7 @@
 #include "uart.h"
 #define SPL_SRC 0x1001000UL
 #define SPL_SIZE 65536
-#define SPL_DEST 0x70000000UL
+#define SPL_DEST 0xD0000000UL
 
 #define BIG_ENDIAN(n)                                   \
     (((n >> 24) & 0xFFu) | (((n >> 16) & 0xFFu) << 8) | \
@@ -31,7 +31,7 @@ int main() {
     print_uart("\r\n");
 
     // Hardcode boot mode for now. TODO(niwis): derive e.g. from GPIO.
-    enum boot_mode_t boot_mode = SPL_ROM;
+    enum boot_mode_t boot_mode = PCIE;
 
     switch (boot_mode) {
         case JTAG:
@@ -71,26 +71,21 @@ int main() {
             print_uart(")\r\nOK");
 
             // Parse the DTB size
-
             uint32_t totalsize = BIG_ENDIAN(*((uint32_t *)(__dtb_start) + 1));
+
             print_uart("\r\nTotalsize = ");
             print_uart_int(totalsize);
 
-            // Copy the DBT at (SPM+4)
+            // Copy the DBT at (SPM+0)
 
             print_uart("\r\nCopying DTB at ");
-            print_uart_addr(SPL_DEST + 4);
+            print_uart_addr(SPL_DEST + 0);
             for (int i = 0; i < totalsize; i++)
-                *(uint8_t *)(SPL_DEST + 4 + i) =
+                *(uint8_t *)(SPL_DEST + 0 + i) =
                     *(((uint8_t *)__dtb_start) + i);
 
             // Assert copy is done
-            __asm__ volatile("fence.i;");
-
-            // Copy the magic at SPM+0 to indicate end of transfert (put it back
-            // in big endian)
-            *((uint32_t *)SPL_DEST) = BIG_ENDIAN(magic);
-
+            __asm__ volatile("fence;");
             __asm__ volatile("fence.i;");
 
             // Now the host driver can read the DTB, CVA6 can go to sleep

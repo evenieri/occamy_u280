@@ -50,7 +50,7 @@ check-uboot:
 	@[ "${UBOOT_SPL_BIN}" ] || ( echo "UBOOT_SPL_BIN is not set"; exit 1 )
 bootrom-spl.bin: check-uboot
 
-bootrom-spl.bin: bootrom.S $(OBJS_C) bootrom.ld occamy.dtb
+bootrom-spl.bin: bootrom.S $(OBJS_C) bootrom.ld occamy_pcie.dtb
 	$(CC) $(CFLAGS) $(INCLUDES) -Tbootrom.ld -DSPLBIN=\"$(UBOOT_SPL_BIN)\" $< $(OBJS_C) -o bootrom-spl.elf
 	$(OBJDUMP) -d bootrom-spl.elf > bootrom-spl.dump
 	$(OBJCOPY) -O binary bootrom-spl.elf bootrom-spl.bin
