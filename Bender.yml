@@ -31,6 +31,9 @@ dependencies:
   register_interface:     { git:  https://github.com/pulp-platform/register_interface.git, version: 0.3.8   }
   snitch_cluster:         { git:  https://github.com/pulp-platform/snitch_cluster.git,     rev:     8cae8d282bc12be4993c0e6c51161374f924c92b }
   tech_cells_generic:     { git:  https://github.com/pulp-platform/tech_cells_generic.git, rev:     v0.2.11 }
+  cva6_te_connector:      { git:  https://github.com/ubolakes/cva6_te_connector.git,       rev: 38cbbec78266798b00908ad91455b5af1ab86fa8 }
+  trace_encoder:          { git:  git@github.com:ubolakes/trace_encoder.git,               rev: b297e33c60b801c498abfcdd36092350bc7ccf11 }
+  encapsulator_atb:       { git:  git@github.com:ubolakes/encapsulator_atb.git,            rev: 3b03591843b0ecd2a58758b40f03f935c3b105ef }
 
 workspace:
   package_links:

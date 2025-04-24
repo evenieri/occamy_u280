@@ -66,6 +66,26 @@ module ${name}_cva6 import ${name}_pkg::*; (
 
   localparam logic [63:0] BootAddr = 'd${cfg["peripherals"]["rom"]["address"]};
 
+  // between tracing modules singals
+  // TIP out - TE in
+  logic [CVA6OccamyConfig.NrCommitPorts-1:0]                                  tip_valid;
+  logic [CVA6OccamyConfig.NrCommitPorts-1:0][connector_pkg::IRETIRE_LEN-1:0]  iretire;
+  logic [CVA6OccamyConfig.NrCommitPorts-1:0]                                  ilastsize;
+  logic [CVA6OccamyConfig.NrCommitPorts-1:0][connector_pkg::ITYPE_LEN-1:0]    itype;
+  logic [connector_pkg::XLEN-1:0]                                             cause;
+  logic [connector_pkg::XLEN-1:0]                                             tval;
+  logic [connector_pkg::PRIV_LEN-1:0]                                         priv;
+  logic [CVA6OccamyConfig.NrCommitPorts-1:0][connector_pkg::XLEN-1:0]         iaddr;
+
+  // TE out - encapsulator in
+  logic                           te_valid;
+  te_pkg::it_packet_type_e        packet_type;
+  logic [te_pkg::P_LEN-1:0]       packet_length;
+  logic [te_pkg::PAYLOAD_LEN-1:0] packet_payload;
+
+  // encapsulator out
+  logic encap_ready;
+  logic encap_valid;
 
   ariane #(
     .ArianeCfg (CVA6OccamyConfig),
@@ -96,5 +116,92 @@ module ${name}_cva6 import ${name}_pkg::*; (
     .sram_cfg_dtag_i (sram_cfg_i.dcache_tag),
     .sram_cfg_dvalid_dirty_i (sram_cfg_i.dcache_valid_dirty)
   );
+
+  // TIP instance
+      (* DONT_TOUCH = "TRUE" *) cva6_te_connector #(
+        .NRET(2), // commit ports
+        .N(2),  // special instruction
+        .FIFO_DEPTH(8)
+      ) i_cva6_tip (
+        .clk_i,
+        .rst_ni,
+        .valid_i        ({i_cva6.commit_stage_i.commit_ack_o[1], i_cva6.commit_stage_i.commit_ack_o[0]}),
+        .pc_i           ({i_cva6.commit_stage_i.commit_instr_i[1].pc, i_cva6.commit_stage_i.commit_instr_i[0].pc}),
+        .op_i           ({i_cva6.commit_stage_i.commit_instr_i[1].op, i_cva6.commit_stage_i.commit_instr_i[0].op}),
+        .is_compressed_i({i_cva6.commit_stage_i.commit_instr_i[1].is_compressed, i_cva6.commit_stage_i.commit_instr_i[0].is_compressed}),
+        .branch_valid_i (i_cva6.resolved_branch.valid),
+        .is_taken_i     (i_cva6.resolved_branch.is_taken),
+        .cf_type_i      (i_cva6.resolved_branch.cf_type),
+        .disc_pc_i      (i_cva6.resolved_branch.pc),
+        .ex_valid_i     (i_cva6.commit_stage_i.exception_o.valid),
+        .tval_i         (i_cva6.commit_stage_i.exception_o.tval),
+        .cause_i        (i_cva6.commit_stage_i.exception_o.cause),
+        .priv_lvl_i     (i_cva6.priv_lvl),
+        .valid_o        (tip_valid),
+        .iretire_o      (iretire),
+        .ilastsize_o    (ilastsize),
+        .itype_o        (itype),
+        .cause_o        (cause),
+        .tval_o         (tval),
+        .priv_o         (priv),
+        .iaddr_o        (iaddr)
+      );
+
+      // TE instance
+      // TODO: hardwire te_reg signals
+      // because I can't use APB to write
+      (* DONT_TOUCH = "TRUE" *) trace_encoder #(
+        .N(2), // is it 1?
+        .ONLY_BRANCHES(1)
+      ) i_TE (
+        .clk_i,
+        .rst_ni,
+        .valid_i             (tip_valid),
+        .itype_i             (itype),
+        .cause_i             (cause),
+        .tval_i              (tval),
+        .priv_i              (priv),
+        .iaddr_i             (iaddr),
+        .iretire_i           (iretire),
+        .ilastsize_i         (ilastsize),
+        .time_i              ('0),
+        .tvec_i              ('0),
+        .epc_i               ('0),
+        .encapsulator_ready_i(encap_ready),
+        .paddr_i             ('0),
+        .pwrite_i            ('0),
+        .psel_i              ('0),
+        .penable_i           ('0),
+        .pwdata_i            ('0),
+        .packet_valid_o      (te_valid),
+        .packet_type_o       (packet_type),
+        .packet_length_o     (packet_length),
+        .packet_payload_o    (packet_payload),
+        .stall_o             (), // not connected
+        .pready_o            (), // not connected
+        .prdata_o            () // not connected
+      );
+
+      // encapsulator_ATB instance
+      (* DONT_TOUCH = "TRUE" *) encapsulator_atb #(
+        .FIFO_DEPTH(4)
+      ) i_encapsulator_atb (
+        .clk_i,
+        .rst_ni,
+        .valid_i             (te_valid),
+        .packet_length_i     (packet_length),
+        .notime_i            (i_TE.notime),
+        .timestamp_i         ('0), // understand where to read the csr value
+        .trace_payload_i     (packet_payload),
+        .atready_i           ('1), // always ready: check if it breaks something
+        .afvalid_i           ('0),
+        .atbytes_o           (), // not connected
+        .atdata_o            (), // not connected
+        .atid_o              (), // not connected
+        .atvalid_o           (), // not connected
+        .afready_o           (), // not connected
+        .encapsulator_ready_o(encap_ready)
+      );
+
 
 endmodule
