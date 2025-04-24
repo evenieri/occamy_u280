@@ -68,14 +68,14 @@ module ${name}_cva6 import ${name}_pkg::*; (
 
   // between tracing modules singals
   // TIP out - TE in
-  logic [CVA6OccamyConfig.NrCommitPorts-1:0]                                  tip_valid;
-  logic [CVA6OccamyConfig.NrCommitPorts-1:0][connector_pkg::IRETIRE_LEN-1:0]  iretire;
-  logic [CVA6OccamyConfig.NrCommitPorts-1:0]                                  ilastsize;
-  logic [CVA6OccamyConfig.NrCommitPorts-1:0][connector_pkg::ITYPE_LEN-1:0]    itype;
-  logic [connector_pkg::XLEN-1:0]                                             cause;
-  logic [connector_pkg::XLEN-1:0]                                             tval;
-  logic [connector_pkg::PRIV_LEN-1:0]                                         priv;
-  logic [CVA6OccamyConfig.NrCommitPorts-1:0][connector_pkg::XLEN-1:0]         iaddr;
+  logic [CVA6OccamyConfig.RASDepth-1:0]                                  tip_valid;
+  logic [CVA6OccamyConfig.RASDepth-1:0][connector_pkg::IRETIRE_LEN-1:0]  iretire;
+  logic [CVA6OccamyConfig.RASDepth-1:0]                                  ilastsize;
+  logic [CVA6OccamyConfig.RASDepth-1:0][connector_pkg::ITYPE_LEN-1:0]    itype;
+  logic [connector_pkg::XLEN-1:0]                                        cause;
+  logic [connector_pkg::XLEN-1:0]                                        tval;
+  logic [connector_pkg::PRIV_LEN-1:0]                                    priv;
+  logic [CVA6OccamyConfig.RASDepth-1:0][connector_pkg::XLEN-1:0]         iaddr;
 
   // TE out - encapsulator in
   logic                           te_valid;
