@@ -16,6 +16,8 @@ set project occamy_xilinx
 
 create_project $project ./occamy_xilinx -force -part xcvu37p-fsvh2892-2L-e
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+set_param gui.addressMap 0
+set_property source_mgmt_mode All [current_project]
 
 # Define sources
 source define-sources.tcl
@@ -36,9 +38,7 @@ set_property top occamy_xilinx [current_fileset]
 
 update_compile_order -fileset sources_1
 synth_design -rtl -name rtl_1
-
-ipx::package_project -root_dir . -vendor ethz.ch -library user -taxonomy /UserIP -set_current true
-
+ipx::package_project -root_dir . -import_files -vendor ethz.ch -library user -taxonomy /UserIP -set_current true
 # Clock interface
 ipx::infer_bus_interface clk_i xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
 

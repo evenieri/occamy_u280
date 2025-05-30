@@ -9,7 +9,7 @@
 
 # Comment in to wait for reset before waiting for timeout.
 # state wait_for_reset:
-#    if (occamy_vcu128_i/occamy_xilinx_0/inst/i_occamy/i_occamy_cva6/i_cva6/pc_commit == 64'h0000000001000000) then
+#    if (occamy_u280_i/occamy_xilinx_0/inst/i_occamy/i_occamy_cva6/i_cva6/pc_commit == 64'h0000000001000000) then
 #        goto wait_for_timeout;
 #    else
 #        goto wait_for_reset;
@@ -19,7 +19,7 @@ state wait_for_timeout:
     if ($counter0 == 16'u2000) then
         reset_counter $counter0;
         trigger;
-    elseif (occamy_vcu128_i/occamy_xilinx_0/inst/i_occamy/i_occamy_cva6/i_cva6/pc_commit == 64'bNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN) then
+    elseif (occamy_u280_i/occamy_xilinx_0/inst/i_occamy/i_occamy_cva6/i_cva6/pc_commit == 64'bNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN) then
         increment_counter $counter0;
         goto timeout;
     else

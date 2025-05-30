@@ -13,7 +13,7 @@ EXT_JTAG    ?= 0
 FPGA_PATH   := $(XILINX_FPGA_PATH)
 HW_SERVER   := $(XILINX_HOST):$(XILINX_PORT)
 BENDER      ?= bender
-VIVADO      ?= vitis-2020.2 vivado
+VIVADO      ?= vitis-2022.1 vivado
 # Do not proceed with implem (CI)
 XILINX_SYNTHESIS_ONLY ?= 0
 
@@ -35,30 +35,32 @@ ifeq ($(EXT_JTAG), 0)
 endif
 
 default: all
-all: occamy_vcu128
+all: occamy_u280
 
 vivado_ips/occamy_xilinx:
 	${MAKE} -C vivado_ips occamy_xilinx DEBUG=$(DEBUG) EXT_JTAG=$(EXT_JTAG)
 
-bootrom/bootrom-spl.coe:
-	${MAKE} -C bootrom
+#bootrom/bootrom-spl.coe:
+#	${MAKE} -C bootrom
 
-occamy_vcu128: vivado_ips/occamy_xilinx bootrom/bootrom-spl.coe define_defines_includes_no_simset.tcl
-	$(VIVADO_ARGS) ${VIVADO} -mode gui -source occamy_vcu128.tcl -tclargs $(DEBUG) $(EXT_JTAG) $(NPROC) ${MKFILE_DIR}/bootrom/bootrom-spl.coe
+#occamy_u280: vivado_ips/occamy_xilinx bootrom/bootrom-spl.coe define_defines_includes_no_simset.tcl
+#	$(VIVADO_ARGS) ${VIVADO} -mode gui -source occamy_u280.tcl -tclargs $(DEBUG) $(EXT_JTAG) $(NPROC) ${MKFILE_DIR}/bootrom/bootrom-spl.coe
+occamy_u280: vivado_ips/occamy_xilinx define_defines_includes_no_simset.tcl
+	$(VIVADO_ARGS) ${VIVADO} -mode gui -source occamy_u280.tcl -tclargs $(DEBUG) $(EXT_JTAG) $(NPROC)
 
 define_defines_includes_no_simset.tcl: $(BENDER_FILES)
 	${BENDER} script vivado $(BENDER_TARGETS) --only-defines --only-includes --no-simset > $@
 
 program:
-	${VIVADO} -mode batch -source occamy_vcu128_program.tcl -tclargs ${VCU}
+	${VIVADO} -mode batch -source occamy_u280_program.tcl -tclargs ${VCU}
 
 flash: ${FILE}
-	${VIVADO} -mode batch -source occamy_vcu128_flash.tcl -tclargs ${HW_SERVER} ${FPGA_PATH} flash.mcs ${OFFSET} ${FILE}
+	${VIVADO} -mode batch -source occamy_u280_flash.tcl -tclargs ${HW_SERVER} ${FPGA_PATH} flash.mcs ${OFFSET} ${FILE}
 	rm flash.mcs
 
 # Flash only uboot (made for TFTP bootmode), overwrite the bootrom, and reset the board
 flashrun: ${UBOOT_ITB}
-	${VIVADO} -mode batch -source occamy_vcu128_flashrun.tcl -tclargs ${HW_SERVER} ${FPGA_PATH} flash.mcs 6000000 ${UBOOT_ITB}
+	${VIVADO} -mode batch -source occamy_u280_flashrun.tcl -tclargs ${HW_SERVER} ${FPGA_PATH} flash.mcs 6000000 ${UBOOT_ITB}
 	rm flash.mcs
 
 flash-u-boot:
@@ -69,6 +71,6 @@ flash-uimage:
 	${MAKE} flash FILE=${LINUX_UIMAGE} OFFSET=0x6100000
 
 clean:
-	rm -rf .Xil occamy_vcu128 *.jou *.log *.str define_defines_includes_no_simset.tcl
+	rm -rf .Xil occamy_u280 *.jou *.log *.str define_defines_includes_no_simset.tcl
 
 .PHONY: program flash clean

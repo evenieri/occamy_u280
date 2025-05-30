@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2.2 (64-bit)
+# SW Build 6060944 on Thu Mar 06 19:10:09 MST 2025
+# IP Build 6050500 on Thu Mar  6 23:33:39 MST 2025
+# SharedData Build 6060542 on Thu Mar 06 10:31:07 MST 2025
+# Start of session at: Tue Apr  8 16:05:27 2025
+# Process ID         : 2269945
+# Current directory  : /scratch2/vborghi/git/occamy_u280
+# Command line       : vivado
+# Log file           : /scratch2/vborghi/git/occamy_u280/vivado.log
+# Journal file       : /scratch2/vborghi/git/occamy_u280/vivado.jou
+# Running On         : lagrev1.ee.ethz.ch
+# Platform           : AlmaLinux
+# Operating System   : AlmaLinux release 8.8 (Sapphire Caracal)
+# Processor Detail   : AMD EPYC 7742 64-Core Processor
+# CPU Frequency      : 3394.412 MHz
+# CPU Physical cores : 128
+# CPU Logical cores  : 128
+# Host memory        : 540318 MB
+# Swap memory        : 268341 MB
+# Total Virtual      : 808659 MB
+# Available Virtual  : 577272 MB
+#-----------------------------------------------------------
+start_gui

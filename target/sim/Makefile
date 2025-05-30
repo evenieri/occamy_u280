@@ -565,10 +565,10 @@ clean-vcs: clean-work
 # FPGA #
 ########
 
-# Build a small Occamy version (CVA6 + 1 cluster) for the VCU128 FPGA board
+# Build a small Occamy version (CVA6 + 1 cluster) for the U280 FPGA board
 .PHONY: fpga
 fpga:
-	${MAKE} -C fpga occamy_vcu128
+	${MAKE} -C fpga occamy_u280
 
 ########
 # Util #
@@ -599,7 +599,7 @@ help:
 	@echo -e "${Blue}bin/occamy_top.vsim ${Black}Build compilation script and compile all sources for Questasim simulation. @IIS: QUESTA_HOME=/usr/pack/modelsim-10.7b-kgf/questasim/ CC=$(QUESTA_HOME)/gcc-5.3.0-linux_x86_64/bin/gcc CXX=$(QUESTA_HOME)/gcc-5.3.0-linux_x86_64/bin/g++ LD=$(QUESTA_HOME)/gcc-5.3.0-linux_x86_64/bin/ld make bin/occamy_top.vsim"
 	@echo -e ""
 	@echo -e "${Blue}all            ${Black}Update all SW and HW related sources (by, e.g., re-generating the RegGen registers and their c-header files)."
-	@echo -e "${Blue}fpga           ${Black}Build a small Occamy version (CVA6 + 1xcluster) for the VCU128 FPGA board."
+	@echo -e "${Blue}fpga           ${Black}Build a small Occamy version (CVA6 + 1xcluster) for the U280 FPGA board."
 	@echo -e ""
 	@echo -e "${Blue}addrmap        ${Black}Generate the addressmap in the following formats: MD, PNG, TEX, PDF."
 	@echo -e ""

@@ -170,7 +170,7 @@ The following command build and run all specified cmake tests with the correspon
 #### FPGA
 For the FPGA build flow have a look at the directory `fpga`. The following Makefile target basically enters this directory and builds Occamy's FPGA version:
 
-- `fpga` Build a small Occamy version (CVA6 + 1xcluster) for the VCU128 FPGA board.
+- `fpga` Build a small Occamy version (CVA6 + 1xcluster) for the U280 FPGA board.
 In addition to generating readable traces, the above command also dumps several
 performance metrics to file for each hart. These can be collected into a single CSV file
 with the following target:

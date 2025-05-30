@@ -1,0 +1,367 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu May 29 11:25:25 2025
+# Process ID: 113663
+# Current directory: /scratch2/vborghi/git/occamy_u280/target/fpga
+# Command line: vivado
+# Log file: /scratch2/vborghi/git/occamy_u280/target/fpga/vivado.log
+# Journal file: /scratch2/vborghi/git/occamy_u280/target/fpga/vivado.jou
+# Running On: lagrev1.ee.ethz.ch, OS: Linux, CPU Frequency: 2250.000 MHz, CPU Physical cores: 32, Host memory: 540318 MB
+#-----------------------------------------------------------
+CRITICAL WARNING: [Common 17-741] No write access right to the local Tcl store at '/home/vborghi/.Xilinx/Vivado/2022.1/XilinxTclStore'. XilinxTclStore is reverted to the installation area. If you want to use local Tcl Store, please change the access right and relaunch Vivado.
+CRITICAL WARNING: [Common 17-741] No write access right to the local Tcl store at '/home/vborghi/.Xilinx/Vivado/2022.1/XilinxTclStore'. XilinxTclStore is reverted to the installation area. If you want to use local Tcl Store, please change the access right and relaunch Vivado.
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project /scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch2/vborghi/git/occamy_u280/target/fpga/vivado_ips'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/ip'.
+CRITICAL WARNING: [Common 17-1649] The Vivado message database '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.runs/impl_1/place_design.pb' contains 79246 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 79247' and re-open the project.
+open_project: Time (s): cpu = 00:01:04 ; elapsed = 00:00:24 . Memory (MB): peak = 8189.492 ; gain = 442.289 ; free physical = 34141 ; free virtual = 167117
+update_compile_order -fileset sources_1
+set_param gui.addressMap 0
+0
+open_bd_design {/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.srcs/sources_1/bd/occamy_u280/occamy_u280.bd}
+Reading block design file </scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.srcs/sources_1/bd/occamy_u280/occamy_u280.bd>...
+Adding component instance block -- xilinx.com:ip:axi_apb_bridge:3.0 - axi_apb_bridge_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - axi_quad_spi_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - c_high
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - c_low
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - concat_rst_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - concat_rst_core
+Adding component instance block -- xilinx.com:ip:hbm:1.0 - hbm_0
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - ila_25
+Adding component instance block -- xilinx.com:ip:jtag_axi:1.2 - jtag_axi_0
+Adding component instance block -- ethz.ch:user:occamy_xilinx:1.0 - occamy
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - psr_25
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - psr_100
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - psr_hbm
+Adding component instance block -- xilinx.com:ip:util_reduced_logic:2.0 - rst_or
+Adding component instance block -- xilinx.com:ip:util_reduced_logic:2.0 - rst_or_core
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smartconnect_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smc_hbm_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smc_hbm_1
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smc_hbm_2
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smc_hbm_3
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smc_hbm_4
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smc_hbm_5
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smc_hbm_6
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smc_hbm_7
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smc_pcie
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_sys
+Adding component instance block -- xilinx.com:ip:xdma:4.1 - xdma_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM04 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM04 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM05 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM05 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM06 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM06 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM07 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM07 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM08 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM08 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM09 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM09 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM10 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM10 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM11 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM11 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM12 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM12 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM13 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM13 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM14 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM14 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM15 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM15 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM16 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM16 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM17 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM17 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM18 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM18 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM19 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM19 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM20 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM20 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM21 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM21 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM22 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM22 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM23 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM23 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM24 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM24 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM25 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM25 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM26 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM26 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM27 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM27 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM28 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM28 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM29 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM29 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM30 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM30 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_00/HBM_MEM31 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_01/HBM_MEM31 from address space /occamy/m_axi_hbm_0.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM00 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM00 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM01 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM01 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM02 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM02 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM03 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM03 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM08 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM08 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM09 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM09 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM10 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM10 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM11 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM11 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM12 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM12 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM13 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM13 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM14 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM14 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM15 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM15 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM16 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM16 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM17 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM17 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM18 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM18 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM19 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM19 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM20 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM20 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM21 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM21 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM22 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM22 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM23 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM23 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM24 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM24 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM25 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM25 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM26 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM26 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM27 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM27 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM28 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM28 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM29 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM29 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM30 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM30 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_04/HBM_MEM31 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_05/HBM_MEM31 from address space /occamy/m_axi_hbm_1.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM00 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM01 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM02 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM03 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM04 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM05 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM06 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM07 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM12 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM13 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM14 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM15 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM16 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM17 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM18 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM19 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM20 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM21 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM22 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM23 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM24 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM25 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM26 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM27 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM28 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM29 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM30 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_08/HBM_MEM31 from address space /occamy/m_axi_hbm_2.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM00 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM01 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM02 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM03 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM04 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM05 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM06 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM07 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM08 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM09 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM10 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM11 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM16 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM17 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM18 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM19 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM20 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM21 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM22 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM23 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM24 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM25 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM26 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM27 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM28 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM29 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM30 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_12/HBM_MEM31 from address space /occamy/m_axi_hbm_3.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM00 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM01 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM02 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM03 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM04 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM05 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM06 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM07 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM08 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM09 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM10 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM11 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM12 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM13 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM14 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM15 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM20 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM21 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM22 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM23 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM24 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM25 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM26 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM27 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM28 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM29 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM30 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_16/HBM_MEM31 from address space /occamy/m_axi_hbm_4.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM00 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM01 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM02 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM03 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM04 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM05 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM06 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM07 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM08 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM09 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM10 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM11 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM12 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM13 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM14 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM15 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM16 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM17 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM18 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM19 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM24 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM25 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM26 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM27 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM28 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM29 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM30 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_20/HBM_MEM31 from address space /occamy/m_axi_hbm_5.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM00 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM01 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM02 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM03 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM04 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM05 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM06 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM07 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM08 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM09 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM10 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM11 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM12 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM13 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM14 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM15 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM16 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM17 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM18 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM19 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM20 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM21 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM22 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM23 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM28 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM29 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM30 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_24/HBM_MEM31 from address space /occamy/m_axi_hbm_6.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM00 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM01 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM02 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM03 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM04 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM05 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM06 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM07 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM08 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM09 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM10 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM11 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM12 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM13 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM14 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM15 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM16 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM17 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM18 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM19 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM20 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM21 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM22 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM23 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM24 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM25 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM26 from address space /occamy/m_axi_hbm_7.
+Excluding slave segment /hbm_0/SAXI_28/HBM_MEM27 from address space /occamy/m_axi_hbm_7.
+Successfully read diagram <occamy_u280> from block design file </scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.srcs/sources_1/bd/occamy_u280/occamy_u280.bd>
+open_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 9006.809 ; gain = 0.000 ; free physical = 34574 ; free virtual = 163564
+open_run impl_1
+INFO: [Device 21-403] Loading part xcvu37p-fsvh2892-2L-e
+Netlist sorting complete. Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 12013.898 ; gain = 92.000 ; free physical = 33961 ; free virtual = 157834
+INFO: [Netlist 29-17] Analyzing 11033 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 5 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'occamy_u280_i/hbm_0/HBM_REF_CLK_0' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'occamy_u280_i/hbm_0/HBM_REF_CLK_1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Chipscope 16-155] Port probe_out3[5] on debug core vio_sys is unconnected
+WARNING: [Chipscope 16-155] Port probe_out3[4] on debug core vio_sys is unconnected
+WARNING: [Chipscope 16-155] Port probe_out3[3] on debug core vio_sys is unconnected
+WARNING: [Chipscope 16-155] Port probe_out3[2] on debug core vio_sys is unconnected
+WARNING: [Chipscope 16-155] Port probe_out3[1] on debug core vio_sys is unconnected
+WARNING: [Chipscope 16-155] Port probe_out3[0] on debug core vio_sys is unconnected
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Power 33-23] Power model is not available for STARTUP_8SERIES_GEN.STARTUP3_8SERIES_inst
