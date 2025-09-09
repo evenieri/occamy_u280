@@ -53,12 +53,12 @@ occamy-single-cluster-vsim:
     - make bin/occamy_top.vsim
     - ./run.py sw/run-single-cluster.yaml --simulator vsim
 
-# Vivado synth (VCU128)
+# Vivado synth (U280)
 occamy-vivado-synth:
   script:
     - make -C target/sim CFG_OVERRIDE=cfg/single-cluster.hjson rtl
     - touch empty.bin
-    - make -C target/fpga occamy_vcu128 EXT_JTAG=1 XILINX_SYNTHESIS_ONLY=1 UBOOT_SPL_BIN=$(realpath empty.bin)
+    - make -C target/fpga occamy_u280 EXT_JTAG=1 XILINX_SYNTHESIS_ONLY=1 UBOOT_SPL_BIN=$(realpath empty.bin)
 
 #####################
 # Full Occamy tests #

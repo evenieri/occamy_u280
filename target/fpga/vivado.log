@@ -2,16 +2,14 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu May 29 11:25:25 2025
-# Process ID: 113663
+# Start of session at: Sat Sep  6 12:03:13 2025
+# Process ID: 382166
 # Current directory: /scratch2/vborghi/git/occamy_u280/target/fpga
 # Command line: vivado
 # Log file: /scratch2/vborghi/git/occamy_u280/target/fpga/vivado.log
 # Journal file: /scratch2/vborghi/git/occamy_u280/target/fpga/vivado.jou
 # Running On: lagrev1.ee.ethz.ch, OS: Linux, CPU Frequency: 2250.000 MHz, CPU Physical cores: 32, Host memory: 540318 MB
 #-----------------------------------------------------------
-CRITICAL WARNING: [Common 17-741] No write access right to the local Tcl store at '/home/vborghi/.Xilinx/Vivado/2022.1/XilinxTclStore'. XilinxTclStore is reverted to the installation area. If you want to use local Tcl Store, please change the access right and relaunch Vivado.
-CRITICAL WARNING: [Common 17-741] No write access right to the local Tcl store at '/home/vborghi/.Xilinx/Vivado/2022.1/XilinxTclStore'. XilinxTclStore is reverted to the installation area. If you want to use local Tcl Store, please change the access right and relaunch Vivado.
 start_gui
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
@@ -25,11 +23,710 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/scratch2/vborghi/git/occamy_u280/target/fpga/vivado_ips'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/ip'.
-CRITICAL WARNING: [Common 17-1649] The Vivado message database '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.runs/impl_1/place_design.pb' contains 79246 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 79247' and re-open the project.
-open_project: Time (s): cpu = 00:01:04 ; elapsed = 00:00:24 . Memory (MB): peak = 8189.492 ; gain = 442.289 ; free physical = 34141 ; free virtual = 167117
+CRITICAL WARNING: [Common 17-1649] The Vivado message database '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.runs/impl_1/place_design.pb' contains 75427 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 75428' and re-open the project.
+open_project: Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 8112.609 ; gain = 368.574 ; free physical = 228840 ; free virtual = 683842
 update_compile_order -fileset sources_1
 set_param gui.addressMap 0
 0
+open_run impl_1
+INFO: [Device 21-403] Loading part xcvu37p-fsvh2892-2L-e
+Netlist sorting complete. Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 11955.867 ; gain = 111.000 ; free physical = 220833 ; free virtual = 676190
+INFO: [Netlist 29-17] Analyzing 11033 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 5 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'occamy_u280_i/hbm_0/HBM_REF_CLK_0' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'occamy_u280_i/hbm_0/HBM_REF_CLK_1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Chipscope 16-155] Port probe_out3[5] on debug core vio_sys is unconnected
+WARNING: [Chipscope 16-155] Port probe_out3[4] on debug core vio_sys is unconnected
+WARNING: [Chipscope 16-155] Port probe_out3[3] on debug core vio_sys is unconnected
+WARNING: [Chipscope 16-155] Port probe_out3[2] on debug core vio_sys is unconnected
+WARNING: [Chipscope 16-155] Port probe_out3[1] on debug core vio_sys is unconnected
+WARNING: [Chipscope 16-155] Port probe_out3[0] on debug core vio_sys is unconnected
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Power 33-23] Power model is not available for STARTUP_8SERIES_GEN.STARTUP3_8SERIES_inst
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:01:25 ; elapsed = 00:01:22 . Memory (MB): peak = 20582.246 ; gain = 1918.129 ; free physical = 212243 ; free virtual = 668120
+Restored from archive | CPU: 88.250000 secs | Memory: 1533.861053 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:01:26 ; elapsed = 00:01:23 . Memory (MB): peak = 20582.246 ; gain = 1918.129 ; free physical = 212264 ; free virtual = 668141
+Netlist sorting complete. Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.23 . Memory (MB): peak = 20582.246 ; gain = 0.000 ; free physical = 212477 ; free virtual = 668356
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1696 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 56 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 176 instances
+  HBM_TWO_STACK_INTF => HBM_TWO_STACK_INTF (HBM_REF_CLK(x2), HBM_SNGLBLI_INTF_APB(x2), HBM_SNGLBLI_INTF_AXI(x32)): 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 5 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 16 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 1342 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 56 instances
+  RAM32X1S => RAM32X1S (RAMS32): 9 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 30 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 1 instance 
+
+open_run: Time (s): cpu = 00:12:50 ; elapsed = 00:07:29 . Memory (MB): peak = 20617.297 ; gain = 11557.930 ; free physical = 211854 ; free virtual = 667736
+open_report: Time (s): cpu = 00:01:14 ; elapsed = 00:00:21 . Memory (MB): peak = 20631.316 ; gain = 0.000 ; free physical = 211310 ; free virtual = 667239
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+create_ip_run [get_files -of_objects [get_fileset sources_1] /scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.srcs/sources_1/bd/occamy_u280/occamy_u280.bd]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xcvu37p-fsvh2892-2L-e
+Top: occamy_u280_wrapper
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 26245.645 ; gain = 0.000 ; free physical = 206906 ; free virtual = 662857
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_wrapper' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/hdl/occamy_u280_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:12]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_axi_apb_bridge_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_axi_apb_bridge_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_axi_apb_bridge_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_axi_apb_bridge_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_axi_bram_ctrl_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_axi_bram_ctrl_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_axi_quad_spi_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_axi_quad_spi_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_axi_quad_spi_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'cfgclk' of module 'occamy_u280_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:983]
+WARNING: [Synth 8-7071] port 'cfgmclk' of module 'occamy_u280_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:983]
+WARNING: [Synth 8-7071] port 'eos' of module 'occamy_u280_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:983]
+WARNING: [Synth 8-7071] port 'preq' of module 'occamy_u280_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:983]
+WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'occamy_u280_axi_quad_spi_0_0' has 45 connections declared, but only 41 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:983]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_blk_mem_gen_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_blk_mem_gen_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_blk_mem_gen_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'occamy_u280_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1025]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'occamy_u280_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1025]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'occamy_u280_blk_mem_gen_0_0' has 16 connections declared, but only 14 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1025]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_c_high_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_c_high_0/synth/occamy_u280_c_high_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_c_high_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_c_high_0/synth/occamy_u280_c_high_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_c_low_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_c_low_0/synth/occamy_u280_c_low_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_c_low_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_c_low_0/synth/occamy_u280_c_low_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_clk_wiz_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_clk_wiz_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'locked' of module 'occamy_u280_clk_wiz_0' is unconnected for instance 'clk_wiz' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1044]
+WARNING: [Synth 8-7023] instance 'clk_wiz' of module 'occamy_u280_clk_wiz_0' has 7 connections declared, but only 6 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1044]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_concat_rst_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_concat_rst_0_0/synth/occamy_u280_concat_rst_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_concat_rst_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_concat_rst_0_0/synth/occamy_u280_concat_rst_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_concat_rst_core_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_concat_rst_core_0/synth/occamy_u280_concat_rst_core_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_concat_rst_core_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_concat_rst_core_0/synth/occamy_u280_concat_rst_core_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_hbm_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_hbm_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_hbm_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_hbm_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'AXI_00_RDATA_PARITY' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_00_RID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_00_BID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_01_RDATA_PARITY' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_01_RID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_01_BID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_04_RDATA_PARITY' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_04_RID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_04_BID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_05_RDATA_PARITY' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_05_RID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_05_BID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_08_RDATA_PARITY' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_08_RID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_08_BID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_12_RDATA_PARITY' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_12_RID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_12_BID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_16_RDATA_PARITY' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_16_RID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_16_BID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_20_RDATA_PARITY' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_20_RID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_20_BID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_24_RDATA_PARITY' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_24_RID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_24_BID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_28_RDATA_PARITY' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_28_RID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'AXI_28_BID' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'apb_complete_0' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'apb_complete_1' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'DRAM_0_STAT_CATTRIP' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'DRAM_0_STAT_TEMP' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'DRAM_1_STAT_CATTRIP' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7071] port 'DRAM_1_STAT_TEMP' of module 'occamy_u280_hbm_0_0' is unconnected for instance 'hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-7023] instance 'hbm_0' of module 'occamy_u280_hbm_0_0' has 358 connections declared, but only 322 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1059]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1382]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_ila_25_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_ila_25_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_ila_25_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_ila_25_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_jtag_axi_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_jtag_axi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_jtag_axi_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_jtag_axi_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awqos' of module 'occamy_u280_jtag_axi_0_0' is unconnected for instance 'jtag_axi_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1387]
+WARNING: [Synth 8-7071] port 'm_axi_arqos' of module 'occamy_u280_jtag_axi_0_0' is unconnected for instance 'jtag_axi_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1387]
+WARNING: [Synth 8-7023] instance 'jtag_axi_0' of module 'occamy_u280_jtag_axi_0_0' has 39 connections declared, but only 37 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1387]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_occamy_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_occamy_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_occamy_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_occamy_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'pad_slw_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'pad_smt_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'pad_drv_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'gpio_d_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'gpio_oe_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'gpio_puen_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'gpio_pden_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'jtag_tdo_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'i2c_sda_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'i2c_sda_en_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'i2c_scl_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'i2c_scl_en_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'spim_sck_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'spim_sck_en_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'spim_csb_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'spim_csb_en_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'spim_sd_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'spim_sd_en_o' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_0_awregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_0_wuser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_0_arregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_1_awregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_1_wuser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_1_arregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_2_awregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_2_wuser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_2_arregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_3_awregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_3_wuser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_3_arregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_4_awregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_4_wuser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_4_arregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_5_awregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_5_wuser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_5_arregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_6_awregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_6_wuser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_6_arregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_7_awregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_7_wuser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_hbm_7_arregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_pcie_awregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_pcie_wuser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 'm_axi_pcie_arregion' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 's_axi_pcie_rid' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 's_axi_pcie_ruser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 's_axi_pcie_bid' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7071] port 's_axi_pcie_buser' of module 'occamy_u280_occamy_0' is unconnected for instance 'occamy' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7023] instance 'occamy' of module 'occamy_u280_occamy_0' has 480 connections declared, but only 431 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1857]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_psr_100_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_psr_100_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_psr_100_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_psr_100_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'occamy_u280_psr_100_0' is unconnected for instance 'psr_100' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1857]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'occamy_u280_psr_100_0' is unconnected for instance 'psr_100' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1857]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'occamy_u280_psr_100_0' is unconnected for instance 'psr_100' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1857]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'occamy_u280_psr_100_0' is unconnected for instance 'psr_100' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1857]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'occamy_u280_psr_100_0' is unconnected for instance 'psr_100' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1857]
+WARNING: [Synth 8-7023] instance 'psr_100' of module 'occamy_u280_psr_100_0' has 10 connections declared, but only 5 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1857]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_psr_25_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_psr_25_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_psr_25_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_psr_25_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'occamy_u280_psr_25_0' is unconnected for instance 'psr_25' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1863]
+INFO: [Common 17-14] Message 'Synth 8-7071' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7023] instance 'psr_25' of module 'occamy_u280_psr_25_0' has 10 connections declared, but only 6 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1863]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_psr_hbm_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_psr_hbm_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_psr_hbm_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_psr_hbm_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'psr_hbm' of module 'occamy_u280_psr_hbm_0' has 10 connections declared, but only 6 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1870]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_rst_or_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_rst_or_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_rst_or_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_rst_or_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_rst_or_core_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_rst_or_core_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_rst_or_core_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_rst_or_core_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_smartconnect_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smartconnect_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_smartconnect_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smartconnect_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_smc_hbm_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_smc_hbm_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_0_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'smc_hbm_0' of module 'occamy_u280_smc_hbm_0_0' has 115 connections declared, but only 95 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1957]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_smc_hbm_1_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_smc_hbm_1_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_1_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'smc_hbm_1' of module 'occamy_u280_smc_hbm_1_0' has 115 connections declared, but only 95 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2053]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_smc_hbm_2_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_2_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_smc_hbm_2_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_2_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'smc_hbm_2' of module 'occamy_u280_smc_hbm_2_0' has 79 connections declared, but only 69 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2149]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_smc_hbm_3_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_3_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_smc_hbm_3_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_3_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'smc_hbm_3' of module 'occamy_u280_smc_hbm_3_0' has 79 connections declared, but only 69 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2219]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_smc_hbm_4_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_4_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_smc_hbm_4_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_4_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'smc_hbm_4' of module 'occamy_u280_smc_hbm_4_0' has 79 connections declared, but only 69 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2289]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_smc_hbm_5_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_5_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_smc_hbm_5_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_5_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'smc_hbm_5' of module 'occamy_u280_smc_hbm_5_0' has 79 connections declared, but only 69 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2359]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_smc_hbm_6_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_6_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_smc_hbm_6_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_6_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'smc_hbm_6' of module 'occamy_u280_smc_hbm_6_0' has 79 connections declared, but only 69 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2429]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_smc_hbm_7_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_7_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_smc_hbm_7_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_hbm_7_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'smc_hbm_7' of module 'occamy_u280_smc_hbm_7_0' has 79 connections declared, but only 69 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2499]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_smc_pcie_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_pcie_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_smc_pcie_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_smc_pcie_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'smc_pcie' of module 'occamy_u280_smc_pcie_0' has 153 connections declared, but only 136 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2569]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_util_ds_buf_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_util_ds_buf_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_util_ds_buf_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_util_ds_buf_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_vio_sys_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_vio_sys_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_vio_sys_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_vio_sys_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'vio_sys' of module 'occamy_u280_vio_sys_0' has 5 connections declared, but only 4 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2711]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_xdma_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_xdma_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_xdma_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/.Xil/Vivado-382166-lagrev1.ee.ethz.ch/realtime/occamy_u280_xdma_0_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'xdma_0' of module 'occamy_u280_xdma_0_0' has 102 connections declared, but only 92 given [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2716]
+INFO: [Synth 8-6157] synthesizing module 'occamy_u280_xlslice_0_0' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xlslice_0_0/synth/occamy_u280_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_xlslice_0_0' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xlslice_0_0/synth/occamy_u280_xlslice_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'occamy_u280_wrapper' (0#1) [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/hdl/occamy_u280_wrapper.v:12]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_sys'. This will prevent further optimization [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:2711]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'concat_rst_core'. This will prevent further optimization [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1055]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'concat_rst_0'. This will prevent further optimization [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1051]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'occamy'. This will prevent further optimization [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/synth/occamy_u280.v:1425]
+WARNING: [Synth 8-7129] Port Din[47] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[46] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[45] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[44] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[43] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[42] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[41] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[40] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[39] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[38] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[37] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[36] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[35] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[34] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[33] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[32] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[31] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[30] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[29] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[28] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[27] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[26] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[25] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[24] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[23] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[22] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[21] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[20] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 26245.645 ; gain = 0.000 ; free physical = 206933 ; free virtual = 662891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 26245.645 ; gain = 0.000 ; free physical = 206932 ; free virtual = 662891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 26245.645 ; gain = 0.000 ; free physical = 206932 ; free virtual = 662891
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_axi_apb_bridge_0_0/occamy_u280_axi_apb_bridge_0_0.dcp' for cell 'occamy_u280_i/axi_apb_bridge_0'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_axi_bram_ctrl_0_0/occamy_u280_axi_bram_ctrl_0_0.dcp' for cell 'occamy_u280_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_axi_quad_spi_0_0/occamy_u280_axi_quad_spi_0_0.dcp' for cell 'occamy_u280_i/axi_quad_spi_0'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_blk_mem_gen_0_0/occamy_u280_blk_mem_gen_0_0.dcp' for cell 'occamy_u280_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_clk_wiz_0/occamy_u280_clk_wiz_0.dcp' for cell 'occamy_u280_i/clk_wiz'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_hbm_0_0/occamy_u280_hbm_0_0.dcp' for cell 'occamy_u280_i/hbm_0'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_ila_25_0/occamy_u280_ila_25_0.dcp' for cell 'occamy_u280_i/ila_25'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_jtag_axi_0_0/occamy_u280_jtag_axi_0_0.dcp' for cell 'occamy_u280_i/jtag_axi_0'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_occamy_0/occamy_u280_occamy_0.dcp' for cell 'occamy_u280_i/occamy'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_100_0/occamy_u280_psr_100_0.dcp' for cell 'occamy_u280_i/psr_100'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_25_0/occamy_u280_psr_25_0.dcp' for cell 'occamy_u280_i/psr_25'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_hbm_0/occamy_u280_psr_hbm_0.dcp' for cell 'occamy_u280_i/psr_hbm'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_rst_or_0/occamy_u280_rst_or_0.dcp' for cell 'occamy_u280_i/rst_or'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_rst_or_core_0/occamy_u280_rst_or_core_0.dcp' for cell 'occamy_u280_i/rst_or_core'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/occamy_u280_smartconnect_0_0.dcp' for cell 'occamy_u280_i/smartconnect_0'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/occamy_u280_smc_hbm_0_0.dcp' for cell 'occamy_u280_i/smc_hbm_0'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/occamy_u280_smc_hbm_1_0.dcp' for cell 'occamy_u280_i/smc_hbm_1'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/occamy_u280_smc_hbm_2_0.dcp' for cell 'occamy_u280_i/smc_hbm_2'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/occamy_u280_smc_hbm_3_0.dcp' for cell 'occamy_u280_i/smc_hbm_3'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/occamy_u280_smc_hbm_4_0.dcp' for cell 'occamy_u280_i/smc_hbm_4'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/occamy_u280_smc_hbm_5_0.dcp' for cell 'occamy_u280_i/smc_hbm_5'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/occamy_u280_smc_hbm_6_0.dcp' for cell 'occamy_u280_i/smc_hbm_6'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/occamy_u280_smc_hbm_7_0.dcp' for cell 'occamy_u280_i/smc_hbm_7'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/occamy_u280_smc_pcie_0.dcp' for cell 'occamy_u280_i/smc_pcie'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_util_ds_buf_0/occamy_u280_util_ds_buf_0.dcp' for cell 'occamy_u280_i/util_ds_buf'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_vio_sys_0/occamy_u280_vio_sys_0.dcp' for cell 'occamy_u280_i/vio_sys'
+INFO: [Project 1-454] Reading design checkpoint '/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/occamy_u280_xdma_0_0.dcp' for cell 'occamy_u280_i/xdma_0'
+Netlist sorting complete. Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 26778.793 ; gain = 81.000 ; free physical = 204464 ; free virtual = 660423
+INFO: [Netlist 29-17] Analyzing 11131 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 4 CPU seconds
+WARNING: [Netlist 29-1115] Found multi-term driver net: occamy_u280_i/util_ds_buf/U0/<const0>.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'occamy_u280_i/hbm_0/HBM_REF_CLK_0' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'occamy_u280_i/hbm_0/HBM_REF_CLK_1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_1/bd_cd65_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_1/bd_cd65_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_2/bd_cd95_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_2/bd_cd95_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_2/bd_cd95_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_2/bd_cd95_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_1/bd_cd95_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_1/bd_cd95_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_1/bd_cd95_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_1/bd_cd95_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_3/bd_cd65_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_3/bd_cd65_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_3/bd_cd65_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_3/bd_cd65_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_2/bd_cd65_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_2/bd_cd65_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_2/bd_cd65_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_2/bd_cd65_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_1/bd_cd65_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_5_0/bd_0/ip/ip_1/bd_cd65_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_5/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_3/bd_cd95_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_3/bd_cd95_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_3/bd_0d34_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_3/bd_0d34_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_3/bd_0d34_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_3/bd_0d34_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_2/bd_0d34_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_2/bd_0d34_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_2/bd_0d34_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_2/bd_0d34_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_1/bd_0d34_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_1/bd_0d34_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_1/bd_0d34_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_4_0/bd_0/ip/ip_1/bd_0d34_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_4/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_3/bd_cc85_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_3/bd_cc85_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_3/bd_cc85_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_3/bd_cc85_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_2/bd_cc85_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_2/bd_cc85_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_2/bd_8d52_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_2/bd_8d52_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/source/occamy_u280_xdma_0_0_pcie4_uscaleplus_ip.xdc] for cell 'occamy_u280_i/xdma_0/inst'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/source/occamy_u280_xdma_0_0_pcie4_uscaleplus_ip.xdc] for cell 'occamy_u280_i/xdma_0/inst'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/occamy_u280_xdma_0_0_board.xdc] for cell 'occamy_u280_i/xdma_0/inst'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/occamy_u280_xdma_0_0_board.xdc] for cell 'occamy_u280_i/xdma_0/inst'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/source/ip_pcie4c_uscale_plus_x1y0.xdc] for cell 'occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/source/ip_pcie4c_uscale_plus_x1y0.xdc] for cell 'occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/source/ip_pcie4c_uscale_plus_x1y0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/occamy_u280_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/occamy_u280_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_gt.xdc] for cell 'occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/occamy_u280_xdma_0_0_pcie4c_ip_gt_i/inst'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_gt.xdc] for cell 'occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/occamy_u280_xdma_0_0_pcie4c_ip_gt_i/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_gt.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/occamy_u280_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/occamy_u280_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_vio_sys_0/occamy_u280_vio_sys_0.xdc] for cell 'occamy_u280_i/vio_sys'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_vio_sys_0/occamy_u280_vio_sys_0.xdc] for cell 'occamy_u280_i/vio_sys'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_util_ds_buf_0/occamy_u280_util_ds_buf_0_board.xdc] for cell 'occamy_u280_i/util_ds_buf/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_util_ds_buf_0/occamy_u280_util_ds_buf_0_board.xdc] for cell 'occamy_u280_i/util_ds_buf/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_3/bd_8d52_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_3/bd_8d52_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_3/bd_8d52_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_3/bd_8d52_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_2/bd_8d52_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_2/bd_8d52_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_2/bd_cc85_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_2/bd_cc85_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_1/bd_8d52_psr0_0.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_1/bd_8d52_psr0_0.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_1/bd_8d52_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_pcie_0/bd_0/ip/ip_1/bd_8d52_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_pcie/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_3/bd_0dc4_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_3/bd_0dc4_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_3/bd_0dc4_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_3/bd_0dc4_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_2/bd_0dc4_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_2/bd_0dc4_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_2/bd_0dc4_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_2/bd_0dc4_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_1/bd_0dc4_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_1/bd_0dc4_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_1/bd_0dc4_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_7_0/bd_0/ip/ip_1/bd_0dc4_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_7/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_3/bd_cd95_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_6_0/bd_0/ip/ip_3/bd_cd95_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_6/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_100_0/occamy_u280_psr_100_0.xdc] for cell 'occamy_u280_i/psr_100/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_100_0/occamy_u280_psr_100_0.xdc] for cell 'occamy_u280_i/psr_100/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_1/bd_cc75_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_1/bd_cc75_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_3/bd_1879_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_3/bd_1879_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_3/bd_1879_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_3/bd_1879_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_2/bd_1879_psr_aclk_0.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_2/bd_1879_psr_aclk_0.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_2/bd_1879_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_2/bd_1879_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_1/bd_1879_psr0_0.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_1/bd_1879_psr0_0.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_1/bd_1879_psr0_0_board.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smartconnect_0_0/bd_0/ip/ip_1/bd_1879_psr0_0_board.xdc] for cell 'occamy_u280_i/smartconnect_0/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_hbm_0/occamy_u280_psr_hbm_0.xdc] for cell 'occamy_u280_i/psr_hbm/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_hbm_0/occamy_u280_psr_hbm_0.xdc] for cell 'occamy_u280_i/psr_hbm/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_hbm_0/occamy_u280_psr_hbm_0_board.xdc] for cell 'occamy_u280_i/psr_hbm/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_hbm_0/occamy_u280_psr_hbm_0_board.xdc] for cell 'occamy_u280_i/psr_hbm/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_1/bd_cc75_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_1/bd_cc75_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_100_0/occamy_u280_psr_100_0_board.xdc] for cell 'occamy_u280_i/psr_100/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_100_0/occamy_u280_psr_100_0_board.xdc] for cell 'occamy_u280_i/psr_100/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_25_0/occamy_u280_psr_25_0.xdc] for cell 'occamy_u280_i/psr_25/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_25_0/occamy_u280_psr_25_0.xdc] for cell 'occamy_u280_i/psr_25/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_25_0/occamy_u280_psr_25_0_board.xdc] for cell 'occamy_u280_i/psr_25/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_psr_25_0/occamy_u280_psr_25_0_board.xdc] for cell 'occamy_u280_i/psr_25/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_jtag_axi_0_0/constraints/jtag_axi.xdc] for cell 'occamy_u280_i/jtag_axi_0/inst'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_jtag_axi_0_0/constraints/jtag_axi.xdc] for cell 'occamy_u280_i/jtag_axi_0/inst'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_ila_25_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'occamy_u280_i/ila_25/inst/ila_lib/inst'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_ila_25_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'occamy_u280_i/ila_25/inst/ila_lib/inst'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_hbm_0_0/hdl/par/hbm_ip.xdc] for cell 'occamy_u280_i/hbm_0/inst'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_hbm_0_0/hdl/par/hbm_ip.xdc] for cell 'occamy_u280_i/hbm_0/inst'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_clk_wiz_0/occamy_u280_clk_wiz_0.xdc] for cell 'occamy_u280_i/clk_wiz/inst'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_clk_wiz_0/occamy_u280_clk_wiz_0.xdc] for cell 'occamy_u280_i/clk_wiz/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_clk_wiz_0/occamy_u280_clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/occamy_u280_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/occamy_u280_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_clk_wiz_0/occamy_u280_clk_wiz_0_board.xdc] for cell 'occamy_u280_i/clk_wiz/inst'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_clk_wiz_0/occamy_u280_clk_wiz_0_board.xdc] for cell 'occamy_u280_i/clk_wiz/inst'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_axi_quad_spi_0_0/occamy_u280_axi_quad_spi_0_0.xdc] for cell 'occamy_u280_i/axi_quad_spi_0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_axi_quad_spi_0_0/occamy_u280_axi_quad_spi_0_0.xdc] for cell 'occamy_u280_i/axi_quad_spi_0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_3/bd_0c24_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_3/bd_0c24_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_1/bd_cc85_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_1/bd_cc85_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_1/bd_cc85_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_3_0/bd_0/ip/ip_1/bd_cc85_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_3/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_3/bd_0cd4_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_3/bd_0cd4_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_3/bd_0cd4_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_3/bd_0cd4_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_2/bd_0cd4_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_2/bd_0cd4_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_2/bd_0cd4_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_2/bd_0cd4_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_1/bd_0cd4_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_1/bd_0cd4_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_1/bd_0cd4_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_2_0/bd_0/ip/ip_1/bd_0cd4_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_2/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_3/bd_0c24_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_3/bd_0c24_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_axi_quad_spi_0_0/occamy_u280_axi_quad_spi_0_0_board.xdc] for cell 'occamy_u280_i/axi_quad_spi_0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_axi_quad_spi_0_0/occamy_u280_axi_quad_spi_0_0_board.xdc] for cell 'occamy_u280_i/axi_quad_spi_0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_2/bd_0c24_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_2/bd_0c24_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_2/bd_0c24_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_2/bd_0c24_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_1/bd_0c24_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_1/bd_0c24_psr0_0.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_1/bd_0c24_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_1_0/bd_0/ip/ip_1/bd_0c24_psr0_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_1/inst/clk_map/psr0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_3/bd_cc75_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_3/bd_cc75_psr_aclk1_0.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_3/bd_cc75_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_3/bd_cc75_psr_aclk1_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_2/bd_cc75_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_2/bd_cc75_psr_aclk_0.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_2/bd_cc75_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_smc_hbm_0_0/bd_0/ip/ip_2/bd_cc75_psr_aclk_0_board.xdc] for cell 'occamy_u280_i/smc_hbm_0/inst/clk_map/psr_aclk/U0'
+INFO: [Timing 38-2] Deriving generated clocks
+write_xdc: Time (s): cpu = 00:02:51 ; elapsed = 00:00:41 . Memory (MB): peak = 30169.180 ; gain = 444.000 ; free physical = 201461 ; free virtual = 657420
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_axi_quad_spi_0_0/occamy_u280_axi_quad_spi_0_0_clocks.xdc] for cell 'occamy_u280_i/axi_quad_spi_0/U0'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_axi_quad_spi_0_0/occamy_u280_axi_quad_spi_0_0_clocks.xdc] for cell 'occamy_u280_i/axi_quad_spi_0/U0'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/occamy_u280_xdma_0_0_pcie4c_ip_board.xdc] for cell 'occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst'
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/occamy_u280_xdma_0_0_pcie4c_ip_board.xdc] for cell 'occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst'
+Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc] for cell 'occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst'
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance sys_clk]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:63]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:63]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins -hierarchical -filter {NAME =~ *gen_channel_container[27].*gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK}]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:63]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:63]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/sys_clk]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:63]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:63]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins {occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/occamy_u280_xdma_0_0_pcie4c_ip_gt_i/inst/gen_gtwizard_gtye4_top.occamy_u280_xdma_0_0_pcie4c_ip_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[27].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK}]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:63]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:63]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins -hierarchical -filter {NAME =~ *gen_channel_container[27].*gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK}]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:64]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:64]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance sys_clk]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:64]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:64]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins {occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/occamy_u280_xdma_0_0_pcie4c_ip_gt_i/inst/gen_gtwizard_gtye4_top.occamy_u280_xdma_0_0_pcie4c_ip_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[27].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST/TXOUTCLK}]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:64]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:64]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/sys_clk]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:64]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:64]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance sys_clk]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:67]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:67]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/sys_clk]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:67]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:67]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance sys_clk]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:68]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:68]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/sys_clk]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:68]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:68]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_pclk/O]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:71]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:71]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_pclk/O]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:71]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:71]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_pclk/O]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:72]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:72]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_pclk/O]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:72]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:72]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance sys_clk]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:75]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:75]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_pclk/O]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:75]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:75]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/sys_clk]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:75]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:75]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_pclk/O]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:75]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:75]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_pclk/O]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:76]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:76]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance sys_clk]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:76]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:76]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/occamy_u280_xdma_0_0_pcie4c_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_pclk/O]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:76]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:76]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst/sys_clk]]'. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:76]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc:76]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc] for cell 'occamy_u280_i/xdma_0/inst/pcie4c_ip_i/inst'
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/occamy_u280_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.gen/sources_1/bd/occamy_u280/ip/occamy_u280_xdma_0_0/ip_0/synth/occamy_u280_xdma_0_0_pcie4c_ip_late.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/occamy_u280_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/occamy_u280_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/occamy_u280_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/occamy_u280_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/occamy_u280_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/occamy_u280_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/occamy_u280_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/occamy_u280_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/usr/pack/vitis-2022.1-zr/Vivado/2022.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/occamy_u280_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/occamy_u280_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 568 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.3 ; elapsed = 00:00:00.33 . Memory (MB): peak = 30169.180 ; gain = 0.000 ; free physical = 201372 ; free virtual = 657333
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1755 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 56 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 176 instances
+  HBM_TWO_STACK_INTF => HBM_TWO_STACK_INTF (HBM_REF_CLK(x2), HBM_SNGLBLI_INTF_APB(x2), HBM_SNGLBLI_INTF_AXI(x32)): 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 5 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 18 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 1403 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 53 instances
+  RAM32X1S => RAM32X1S (RAMS32): 9 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 30 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 1 instance 
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:11:45 ; elapsed = 00:06:09 . Memory (MB): peak = 30407.340 ; gain = 4161.695 ; free physical = 200764 ; free virtual = 656729
+136 Infos, 239 Warnings, 24 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:11:45 ; elapsed = 00:06:09 . Memory (MB): peak = 30407.340 ; gain = 4161.695 ; free physical = 200764 ; free virtual = 656729
 open_bd_design {/scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.srcs/sources_1/bd/occamy_u280/occamy_u280.bd}
 Reading block design file </scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.srcs/sources_1/bd/occamy_u280/occamy_u280.bd>...
 Adding component instance block -- xilinx.com:ip:axi_apb_bridge:3.0 - axi_apb_bridge_0
@@ -345,23 +1042,18 @@ Excluding slave segment /hbm_0/SAXI_28/HBM_MEM25 from address space /occamy/m_ax
 Excluding slave segment /hbm_0/SAXI_28/HBM_MEM26 from address space /occamy/m_axi_hbm_7.
 Excluding slave segment /hbm_0/SAXI_28/HBM_MEM27 from address space /occamy/m_axi_hbm_7.
 Successfully read diagram <occamy_u280> from block design file </scratch2/vborghi/git/occamy_u280/target/fpga/occamy_u280/occamy_u280.srcs/sources_1/bd/occamy_u280/occamy_u280.bd>
-open_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 9006.809 ; gain = 0.000 ; free physical = 34574 ; free virtual = 163564
-open_run impl_1
-INFO: [Device 21-403] Loading part xcvu37p-fsvh2892-2L-e
-Netlist sorting complete. Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 12013.898 ; gain = 92.000 ; free physical = 33961 ; free virtual = 157834
-INFO: [Netlist 29-17] Analyzing 11033 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 5 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2022.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'occamy_u280_i/hbm_0/HBM_REF_CLK_0' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'occamy_u280_i/hbm_0/HBM_REF_CLK_1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-WARNING: [Chipscope 16-155] Port probe_out3[5] on debug core vio_sys is unconnected
-WARNING: [Chipscope 16-155] Port probe_out3[4] on debug core vio_sys is unconnected
-WARNING: [Chipscope 16-155] Port probe_out3[3] on debug core vio_sys is unconnected
-WARNING: [Chipscope 16-155] Port probe_out3[2] on debug core vio_sys is unconnected
-WARNING: [Chipscope 16-155] Port probe_out3[1] on debug core vio_sys is unconnected
-WARNING: [Chipscope 16-155] Port probe_out3[0] on debug core vio_sys is unconnected
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Power 33-23] Power model is not available for STARTUP_8SERIES_GEN.STARTUP3_8SERIES_inst
+open_bd_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:07 . Memory (MB): peak = 33276.418 ; gain = 0.000 ; free physical = 198573 ; free virtual = 654593
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property offset 0x001010000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM01_1}]
+set_property offset 0x001000000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM00_1}]
+set_property offset 0x001000000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM00_1}]
+set_property offset 0x001010000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM01_1}]
+set_property offset 0x001000000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM00_1}]
+set_property offset 0x001010000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM01_1}]
+set_property offset 0x001000000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM00_1}]
+set_property offset 0x000090000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM01}]
+set_property offset 0x000080000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM00}]
+set_property offset 0x0000C0000000 [get_bd_addr_segs {occamy/m_axi_hbm_1/SEG_hbm_0_HBM_MEM04}]
+set_property offset 0x0000B0000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM03}]
+set_property offset 0x000090000000 [get_bd_addr_segs {occamy/m_axi_hbm_0/SEG_hbm_0_HBM_MEM01}]

@@ -50,10 +50,10 @@ set_property LOC GTYE4_COMMON_X1Y3 [get_cells {occamy_u280_i/util_ds_buf/U0/USE_
 #    USB_UART_RX  Input from FT4232 UART to FPGA
 #    USB_UART_TX  Output from FPGA to FT4232 UART
 #
-set_property PACKAGE_PIN A28              [get_ports uart_tx_o_0]                        ;# Bank  75 VCCO - VCC1V8   - IO_L24N_T3U_N11_75
-set_property IOSTANDARD  LVCMOS18         [get_ports uart_tx_o_0]                        ;# Bank  75 VCCO - VCC1V8   - IO_L24N_T3U_N11_75
-set_property PACKAGE_PIN B33              [get_ports uart_rx_i_0]                        ;# Bank  75 VCCO - VCC1V8   - IO_T3U_N12_75
-set_property IOSTANDARD  LVCMOS18         [get_ports uart_rx_i_0]                        ;# Bank  75 VCCO - VCC1V8   - IO_T3U_N12_75
+set_property PACKAGE_PIN A28              [get_ports uart_rx_i_0]                        ;# Bank  75 VCCO - VCC1V8   - IO_L24N_T3U_N11_75
+set_property IOSTANDARD  LVCMOS18         [get_ports uart_rx_i_0]                        ;# Bank  75 VCCO - VCC1V8   - IO_L24N_T3U_N11_75
+set_property PACKAGE_PIN B33              [get_ports uart_tx_o_0]                        ;# Bank  75 VCCO - VCC1V8   - IO_T3U_N12_75
+set_property IOSTANDARD  LVCMOS18         [get_ports uart_tx_o_0]                        ;# Bank  75 VCCO - VCC1V8   - IO_T3U_N12_75
 #
 
 # Bank 75 Ultrascale+ Device to Satellite Controller CMS UART Interface (115200, No parity, 8 bits, 1 stop bit)
@@ -65,6 +65,8 @@ set_property IOSTANDARD  LVCMOS18         [get_ports uart_rx_i_0]               
 #set_property IOSTANDARD  LVCMOS18         [get_ports uart_tx_o_0]                       ;# Bank  75 VCCO - VCC1V8   - IO_L18N_T2U_N11_AD2N_75
 #set_property PACKAGE_PIN E28              [get_ports uart_rx_i_0]                       ;# Bank  75 VCCO - VCC1V8   - IO_L18P_T2U_N10_AD2P_75
 #set_property IOSTANDARD  LVCMOS18         [get_ports uart_rx_i_0]                       ;# Bank  75 VCCO - VCC1V8   - IO_L18P_T2U_N10_AD2P_75
+
+
 
 #
 #  CPU_RESET_FPGA Connects to SW1 push button On the top edge of the PCB Assembly, also connects to Satellite Contoller
